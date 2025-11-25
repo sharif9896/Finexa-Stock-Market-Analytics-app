@@ -28,7 +28,8 @@ export default function AuthPage() {
 
     if (!isSignup && res.ok) {
       localStorage.setItem("token", data.token);
-      window.location.href = "http://localhost:5174/";
+      window.location.href =
+        "https://finexa-stock-market-analytics-app-x.vercel.app/";
     }
   };
 
