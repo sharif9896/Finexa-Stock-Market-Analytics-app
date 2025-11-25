@@ -1,0 +1,103 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
+const Navbar = () => {
+  return (
+    <div
+      className="container-fluid border-bottom"
+      style={{ backgroundColor: "#fff" }}
+    >
+      <nav className="navbar navbar-expand-lg navbar-light bg-white">
+        <div className="container">
+          {/* Logo */}
+          <Link to="/" className="navbar-brand">
+            <img
+              src="media/images/logos_t.png"
+              className="img-fluid"
+              style={{ maxWidth: "120px" }}
+              alt="logo"
+            />
+          </Link>
+
+          {/* Toggle Button */}
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+
+          {/* Menu Items */}
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0 text-center gap-1">
+              <li className="nav-item">
+                <Link to="/" className="nav-link fw-medium">
+                  Home
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/about" className="nav-link fw-medium">
+                  About
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/product" className="nav-link fw-medium">
+                  Product
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/pricing" className="nav-link fw-medium">
+                  Pricing
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/support" className="nav-link fw-medium">
+                  Support
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/signup" className="nav-link fw-medium">
+                  Signup
+                </Link>
+              </li>
+
+              {/* Dropdown */}
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle fw-medium"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  href="#"
+                >
+                  More
+                </a>
+                <ul className="dropdown-menu dropdown-menu-end text-center">
+                  <li>
+                    <a className="dropdown-item">Action</a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item">Another action</a>
+                  </li>
+                  <li>
+                    <hr className="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a className="dropdown-item">Something else</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  );
+};
+
+export default Navbar;
